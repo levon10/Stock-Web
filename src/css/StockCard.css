@@ -1,0 +1,145 @@
+.stock-card {
+  position: relative;
+  display: flex;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.stock-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  flex-shrink: 0;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3273dc;
+  background-color: #e8f0fe;
+}
+
+.stock-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.watchlist-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.watchlist-btn:hover {
+  color: #f8c824;
+}
+
+.watchlist-btn.active {
+  color: #f8c824;
+}
+
+.stock-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.stock-header {
+  margin-bottom: 8px;
+}
+
+.stock-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.stock-symbol {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.stock-details {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.stock-price {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.stock-change {
+  font-size: 14px;
+  margin: 0;
+}
+
+.stock-change.positive {
+  color: #2ecc71;
+}
+
+.stock-change.negative {
+  color: #e74c3c;
+}
+
+.stock-market-cap {
+  margin: 0;
+  font-size: 14px;
+  color: #34495e;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .stock-card {
+      flex-direction: column;
+  }
+  
+  .company-logo {
+      margin-right: 0;
+      margin-bottom: 12px;
+  }
+}
